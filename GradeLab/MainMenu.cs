@@ -144,8 +144,8 @@ namespace GradeTrackerV3
             Task test = new Task("ENGG*420", 0.5, "Test1", 80, 20);
 
             SqliteDataAccess.SaveTask(test);
-            var output = SqliteDataAccess.LoadTask();
-            Console.WriteLine(output);
+
+            SqliteDataAccess.LoadTask();
 
             ///////////////////////////////
             ///////////////////////////////

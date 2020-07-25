@@ -33,6 +33,8 @@ namespace GradeTrackerV3
                         new ObservablePoint(20, 60),
                         new ObservablePoint(25, 40),
 
+                        // Could add a loop here
+
                     },
                     PointGeometrySize = 5
                 }

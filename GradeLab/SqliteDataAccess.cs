@@ -15,10 +15,20 @@ namespace GradeTrackerV3
         public static List<Task> LoadTask()
         {
             // FUNCTIONALITY TO BE CHANGED
-            using (IDbConnection cnn = new SQLiteConnection(LoadConnectionString()))
+            using (SQLiteConnection cnn = new SQLiteConnection(LoadConnectionString()))
             {
-                var output = cnn.Query<Task>("Select * from Grades", new DynamicParameters());
-                return output.ToList();
+                try
+                {
+                    SQLiteCommand cmd = new SQLiteCommand("SELECT * FROM Grades", cnn);
+                    cnn.Open();
+                    SQLiteDataReader rdr = cmd.ExecuteReader();
+
+                    while (rdr.Read()) { Console.WriteLine("Course Code: {0}\n", rdr["CourseCode"]); }
+                    rdr.Close();
+                }
+                finally { cnn.Close(); }
+
+                return null; // TO BE CHANGED
             }   
             
         }
@@ -28,7 +38,7 @@ namespace GradeTrackerV3
             // FUNCTIONALITY TO BE CHANGED
             using (IDbConnection cnn = new SQLiteConnection(LoadConnectionString()))
             {
-                cnn.Execute("insert into Grades (CourseCode, CourseWeight, TaskName, TaskMark, TaskWeight) " +
+                cnn.Execute("INSERT INTO Grades (CourseCode, CourseWeight, TaskName, TaskMark, TaskWeight) " +
                     "values (@CourseCode, @CourseWeight, @TaskName, @TaskMark, @TaskWeight)", task);
             }
 
