@@ -38,8 +38,16 @@ namespace GradeTrackerV3
             // FUNCTIONALITY TO BE CHANGED
             using (IDbConnection cnn = new SQLiteConnection(LoadConnectionString()))
             {
-                cnn.Execute("INSERT INTO Grades (CourseCode, CourseWeight, TaskName, TaskMark, TaskWeight) " +
-                    "values (@CourseCode, @CourseWeight, @TaskName, @TaskMark, @TaskWeight)", task);
+                try
+                {
+                    cnn.Execute("INSERT INTO Grades (CourseCode, CourseWeight, TaskName, TaskMark, TaskWeight) " +
+                        "values (@CourseCode, @CourseWeight, @TaskName, @TaskMark, @TaskWeight)", task);
+                }
+                catch
+                {
+                    // Pop-up that entry already exists
+                }
+                finally { cnn.Close(); }
             }
 
         }

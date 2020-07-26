@@ -23,6 +23,15 @@ namespace GradeTrackerV3
             this.taskWeight = taskWeight;
         }
 
+        public Task(string courseCode, double courseWeight, string taskName, double taskWeight)
+        {
+            this.courseCode = courseCode;
+            this.courseWeight = courseWeight;
+            this.taskName = taskName;
+            this.taskMark = 0.0;
+            this.taskWeight = taskWeight;
+        }
+
         public Task()
         {
 

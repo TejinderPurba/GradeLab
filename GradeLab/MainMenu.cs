@@ -141,7 +141,7 @@ namespace GradeTrackerV3
             ///////////////////////////////
             ///////////////////////////////
 
-            Task test = new Task("ENGG*420", 0.5, "Test1", 80, 20);
+            Task test = new Task("ENGG*420", 0.5, "Test1", 20.0);
 
             SqliteDataAccess.SaveTask(test);
 

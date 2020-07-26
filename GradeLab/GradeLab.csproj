@@ -112,6 +112,9 @@
     <EmbeddedResource Include="FormDashboard.resx">
       <DependentUpon>FormDashboard.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="FormEdit.resx">
+      <DependentUpon>FormEdit.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="MainMenu.resx">
       <DependentUpon>MainMenu.cs</DependentUpon>
     </EmbeddedResource>
