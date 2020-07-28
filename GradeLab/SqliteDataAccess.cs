@@ -23,7 +23,7 @@ namespace GradeTrackerV3
                     cnn.Open();
                     SQLiteDataReader rdr = cmd.ExecuteReader();
 
-                    while (rdr.Read()) { Console.WriteLine("Course Code: {0}\n", rdr["CourseCode"]); }
+                    while (rdr.Read()) { Console.WriteLine("Semester: {0}\n", rdr["Semester"]); }
                     rdr.Close();
                 }
                 finally { cnn.Close(); }
@@ -40,8 +40,8 @@ namespace GradeTrackerV3
             {
                 try
                 {
-                    cnn.Execute("INSERT INTO Grades (CourseCode, CourseWeight, TaskName, TaskMark, TaskWeight) " +
-                        "values (@CourseCode, @CourseWeight, @TaskName, @TaskMark, @TaskWeight)", task);
+                    cnn.Execute("INSERT INTO Grades (CourseCode, CourseWeight, TaskName, TaskMark, TaskWeight, Semester, Final) " +
+                        "values (@CourseCode, @CourseWeight, @TaskName, @TaskMark, @TaskWeight, @Semester, @Final)", task);
                 }
                 catch
                 {

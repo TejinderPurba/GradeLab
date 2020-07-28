@@ -13,23 +13,29 @@ namespace GradeTrackerV3
         private string taskName;
         private double taskMark;
         private double taskWeight;
+        private string semester;
+        private int final;
 
-        public Task(string courseCode, double courseWeight, string taskName, double taskMark, double taskWeight)
+        public Task(string courseCode, double courseWeight, string taskName, double taskMark, double taskWeight, string semester, int final)
         {
             this.courseCode = courseCode;
             this.courseWeight = courseWeight;
             this.taskName = taskName;
             this.taskMark = taskMark;
             this.taskWeight = taskWeight;
+            this.semester = semester;
+            this.final = final;
         }
 
-        public Task(string courseCode, double courseWeight, string taskName, double taskWeight)
+        public Task(string courseCode, double courseWeight, string taskName, double taskWeight, string semester, int final)
         {
             this.courseCode = courseCode;
             this.courseWeight = courseWeight;
             this.taskName = taskName;
             this.taskMark = 0.0;
             this.taskWeight = taskWeight;
+            this.semester = semester;
+            this.final = final;
         }
 
         public Task()
@@ -52,19 +58,31 @@ namespace GradeTrackerV3
         public string TaskName
         {
             get { return this.taskName; }
-            set { taskName = value; }
+            set { this.taskName = value; }
         }
 
         public double TaskMark
         {
             get { return this.taskMark; }
-            set { taskMark = value; }
+            set { this.taskMark = value; }
         }
 
         public double TaskWeight
         {
             get { return this.taskWeight; }
-            set { taskWeight = value; }
+            set { this.taskWeight = value; }
+        }
+
+        public string Semester
+        {
+            get { return this.semester; }
+            set { this.semester = value; }
+        }
+
+        public int Final
+        {
+            get { return this.final; }
+            set { this.final = value; }
         }
     }
 }
