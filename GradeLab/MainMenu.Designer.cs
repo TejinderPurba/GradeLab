@@ -30,8 +30,8 @@
         {
             this.panelMenu = new System.Windows.Forms.Panel();
             this.btnAbout = new FontAwesome.Sharp.IconButton();
+            this.btnPreferences = new FontAwesome.Sharp.IconButton();
             this.btnStatistics = new FontAwesome.Sharp.IconButton();
-            this.btnEdit = new FontAwesome.Sharp.IconButton();
             this.btnDashboard = new FontAwesome.Sharp.IconButton();
             this.panelLogo = new System.Windows.Forms.Panel();
             this.btnHome = new System.Windows.Forms.PictureBox();
@@ -39,7 +39,7 @@
             this.iconMaximize = new FontAwesome.Sharp.IconButton();
             this.iconMinimize = new FontAwesome.Sharp.IconButton();
             this.iconClose = new FontAwesome.Sharp.IconButton();
-            this.labelTitle = new System.Windows.Forms.Label();
+            this.lblTitle = new System.Windows.Forms.Label();
             this.panelShadow = new System.Windows.Forms.Panel();
             this.panelDesktop = new System.Windows.Forms.Panel();
             this.panelMenu.SuspendLayout();
@@ -52,8 +52,8 @@
             // 
             this.panelMenu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(29)))), ((int)(((byte)(31)))), ((int)(((byte)(47)))));
             this.panelMenu.Controls.Add(this.btnAbout);
+            this.panelMenu.Controls.Add(this.btnPreferences);
             this.panelMenu.Controls.Add(this.btnStatistics);
-            this.panelMenu.Controls.Add(this.btnEdit);
             this.panelMenu.Controls.Add(this.btnDashboard);
             this.panelMenu.Controls.Add(this.panelLogo);
             this.panelMenu.Dock = System.Windows.Forms.DockStyle.Left;
@@ -79,11 +79,34 @@
             this.btnAbout.Padding = new System.Windows.Forms.Padding(10, 0, 30, 0);
             this.btnAbout.Rotation = 0D;
             this.btnAbout.Size = new System.Drawing.Size(220, 70);
-            this.btnAbout.TabIndex = 4;
+            this.btnAbout.TabIndex = 5;
             this.btnAbout.Text = "About";
             this.btnAbout.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnAbout.UseVisualStyleBackColor = true;
             this.btnAbout.Click += new System.EventHandler(this.btnAbout_Click);
+            // 
+            // btnPreferences
+            // 
+            this.btnPreferences.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnPreferences.FlatAppearance.BorderSize = 0;
+            this.btnPreferences.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnPreferences.Flip = FontAwesome.Sharp.FlipOrientation.Normal;
+            this.btnPreferences.Font = new System.Drawing.Font("Century Gothic", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnPreferences.ForeColor = System.Drawing.Color.Gainsboro;
+            this.btnPreferences.IconChar = FontAwesome.Sharp.IconChar.Cog;
+            this.btnPreferences.IconColor = System.Drawing.Color.Gainsboro;
+            this.btnPreferences.IconSize = 32;
+            this.btnPreferences.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnPreferences.Location = new System.Drawing.Point(0, 260);
+            this.btnPreferences.Name = "btnPreferences";
+            this.btnPreferences.Padding = new System.Windows.Forms.Padding(10, 0, 30, 0);
+            this.btnPreferences.Rotation = 0D;
+            this.btnPreferences.Size = new System.Drawing.Size(220, 70);
+            this.btnPreferences.TabIndex = 4;
+            this.btnPreferences.Text = "Preferences";
+            this.btnPreferences.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnPreferences.UseVisualStyleBackColor = true;
+            this.btnPreferences.Click += new System.EventHandler(this.btnPreferences_Click);
             // 
             // btnStatistics
             // 
@@ -97,39 +120,16 @@
             this.btnStatistics.IconColor = System.Drawing.Color.Gainsboro;
             this.btnStatistics.IconSize = 32;
             this.btnStatistics.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnStatistics.Location = new System.Drawing.Point(0, 260);
+            this.btnStatistics.Location = new System.Drawing.Point(0, 190);
             this.btnStatistics.Name = "btnStatistics";
             this.btnStatistics.Padding = new System.Windows.Forms.Padding(10, 0, 30, 0);
             this.btnStatistics.Rotation = 0D;
             this.btnStatistics.Size = new System.Drawing.Size(220, 70);
-            this.btnStatistics.TabIndex = 3;
+            this.btnStatistics.TabIndex = 2;
             this.btnStatistics.Text = "Statistics";
             this.btnStatistics.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnStatistics.UseVisualStyleBackColor = true;
             this.btnStatistics.Click += new System.EventHandler(this.btnStatistics_Click);
-            // 
-            // btnEdit
-            // 
-            this.btnEdit.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnEdit.FlatAppearance.BorderSize = 0;
-            this.btnEdit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnEdit.Flip = FontAwesome.Sharp.FlipOrientation.Normal;
-            this.btnEdit.Font = new System.Drawing.Font("Century Gothic", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnEdit.ForeColor = System.Drawing.Color.Gainsboro;
-            this.btnEdit.IconChar = FontAwesome.Sharp.IconChar.Edit;
-            this.btnEdit.IconColor = System.Drawing.Color.Gainsboro;
-            this.btnEdit.IconSize = 32;
-            this.btnEdit.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnEdit.Location = new System.Drawing.Point(0, 190);
-            this.btnEdit.Name = "btnEdit";
-            this.btnEdit.Padding = new System.Windows.Forms.Padding(10, 0, 30, 0);
-            this.btnEdit.Rotation = 0D;
-            this.btnEdit.Size = new System.Drawing.Size(220, 70);
-            this.btnEdit.TabIndex = 2;
-            this.btnEdit.Text = "Edit";
-            this.btnEdit.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnEdit.UseVisualStyleBackColor = true;
-            this.btnEdit.Click += new System.EventHandler(this.btnEdit_Click);
             // 
             // btnDashboard
             // 
@@ -180,7 +180,7 @@
             this.panelTitleBar.Controls.Add(this.iconMaximize);
             this.panelTitleBar.Controls.Add(this.iconMinimize);
             this.panelTitleBar.Controls.Add(this.iconClose);
-            this.panelTitleBar.Controls.Add(this.labelTitle);
+            this.panelTitleBar.Controls.Add(this.lblTitle);
             this.panelTitleBar.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelTitleBar.Location = new System.Drawing.Point(220, 0);
             this.panelTitleBar.Name = "panelTitleBar";
@@ -245,18 +245,18 @@
             this.iconClose.UseVisualStyleBackColor = true;
             this.iconClose.Click += new System.EventHandler(this.iconClose_Click);
             // 
-            // labelTitle
+            // lblTitle
             // 
-            this.labelTitle.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
-            this.labelTitle.AutoSize = true;
-            this.labelTitle.Font = new System.Drawing.Font("Century Gothic", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelTitle.ForeColor = System.Drawing.Color.Gainsboro;
-            this.labelTitle.Location = new System.Drawing.Point(250, 34);
-            this.labelTitle.Name = "labelTitle";
-            this.labelTitle.Size = new System.Drawing.Size(201, 43);
-            this.labelTitle.TabIndex = 4;
-            this.labelTitle.Text = "GradeLab";
-            this.labelTitle.MouseDown += new System.Windows.Forms.MouseEventHandler(this.labelTitle_MouseDown);
+            this.lblTitle.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
+            this.lblTitle.AutoSize = true;
+            this.lblTitle.Font = new System.Drawing.Font("Century Gothic", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTitle.ForeColor = System.Drawing.Color.Gainsboro;
+            this.lblTitle.Location = new System.Drawing.Point(250, 34);
+            this.lblTitle.Name = "lblTitle";
+            this.lblTitle.Size = new System.Drawing.Size(201, 43);
+            this.lblTitle.TabIndex = 4;
+            this.lblTitle.Text = "GradeLab";
+            this.lblTitle.MouseDown += new System.Windows.Forms.MouseEventHandler(this.labelTitle_MouseDown);
             // 
             // panelShadow
             // 
@@ -304,15 +304,15 @@
         private FontAwesome.Sharp.IconButton btnDashboard;
         private System.Windows.Forms.Panel panelLogo;
         private FontAwesome.Sharp.IconButton btnStatistics;
-        private FontAwesome.Sharp.IconButton btnEdit;
         private System.Windows.Forms.PictureBox btnHome;
         private System.Windows.Forms.Panel panelTitleBar;
         private System.Windows.Forms.Panel panelShadow;
         private System.Windows.Forms.Panel panelDesktop;
-        private System.Windows.Forms.Label labelTitle;
+        private System.Windows.Forms.Label lblTitle;
         private FontAwesome.Sharp.IconButton iconMaximize;
         private FontAwesome.Sharp.IconButton iconMinimize;
         private FontAwesome.Sharp.IconButton iconClose;
+        private FontAwesome.Sharp.IconButton btnPreferences;
         private FontAwesome.Sharp.IconButton btnAbout;
     }
 }

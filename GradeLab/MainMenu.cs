@@ -107,12 +107,6 @@ namespace GradeTrackerV3
             OpenChildForm(new FormDashboard());
         }
 
-        private void btnEdit_Click(object sender, EventArgs e)
-        {
-            ActivateButton(sender, Color.FromArgb(40, 100, 203));
-            OpenChildForm(new FormEdit());
-        }
-
         private void btnStatistics_Click(object sender, EventArgs e)
         {
             ActivateButton(sender, Color.FromArgb(40, 100, 203));
@@ -123,6 +117,12 @@ namespace GradeTrackerV3
         {
             ActivateButton(sender, Color.FromArgb(40, 100, 203));
             OpenChildForm(new FormAbout());
+        }
+
+        private void btnPreferences_Click(object sender, EventArgs e)
+        {
+            ActivateButton(sender, Color.FromArgb(40, 100, 203));
+            OpenChildForm(new FormPreferences());
         }
 
         //Events
@@ -141,11 +141,11 @@ namespace GradeTrackerV3
             ///////////////////////////////
             ///////////////////////////////
 
-            Task test = new Task("ENGG*4200", 0.5, "Test1", 20.0, "Winter 2017", 0);
+            //Task test = new Task("ENGG*4200", 0.5, "Test1", 20.0, "Winter 2017", 0);
 
-            SqliteDataAccess.SaveTask(test);
+            //SqliteDataAccess.SaveTask(test);
 
-            SqliteDataAccess.LoadTask();
+            //SqliteDataAccess.LoadTask();
 
             ///////////////////////////////
             ///////////////////////////////

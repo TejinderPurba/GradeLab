@@ -19,7 +19,7 @@ namespace GradeTrackerV3
         public FormDashboard()
         {
             InitializeComponent();
-
+            /*
             cartesianChart1.Series = new SeriesCollection
             {
                 new LineSeries
@@ -38,7 +38,7 @@ namespace GradeTrackerV3
                     },
                     PointGeometrySize = 5
                 }
-            };
+            };*/
         }
     }
 }
