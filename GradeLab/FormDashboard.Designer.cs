@@ -31,27 +31,51 @@ namespace GradeTrackerV3
         /// </summary>
         private void InitializeComponent()
         {
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle11 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle12 = new System.Windows.Forms.DataGridViewCellStyle();
             this.panelSemesterBorder = new System.Windows.Forms.Panel();
             this.panelGrades = new System.Windows.Forms.Panel();
+            this.panelHeaderBottomBorder = new System.Windows.Forms.Panel();
+            this.panelHeaderTopBorder = new System.Windows.Forms.Panel();
             this.listboxCourseSelection = new System.Windows.Forms.ListBox();
             this.panelCurrentSelection = new System.Windows.Forms.Panel();
             this.btnAddNewCourse = new FontAwesome.Sharp.IconButton();
-            this.textboxCurrentSelection = new System.Windows.Forms.TextBox();
             this.lblCurrentSelection = new System.Windows.Forms.Label();
             this.panelSemester = new System.Windows.Forms.Panel();
             this.listboxSemester = new System.Windows.Forms.ListBox();
             this.panelSemesterLabel = new System.Windows.Forms.Panel();
             this.lblSemester = new System.Windows.Forms.Label();
             this.panelHeader = new System.Windows.Forms.Panel();
+            this.panelProjectionsLeftBorder = new System.Windows.Forms.Panel();
             this.panelProjections = new System.Windows.Forms.Panel();
             this.lblProjectionTitle = new System.Windows.Forms.Label();
-            this.panelHeaderGap = new System.Windows.Forms.Panel();
+            this.panelGradeTableContainer = new System.Windows.Forms.Panel();
+            this.panelFinalMarkContainer = new System.Windows.Forms.Panel();
+            this.lblFinalMark = new System.Windows.Forms.Label();
+            this.lblCurrentMark = new System.Windows.Forms.Label();
+            this.panelGradeTable = new System.Windows.Forms.Panel();
+            this.dataGridViewGrades = new System.Windows.Forms.DataGridView();
+            this.Task = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Worth = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.YourMark = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.CourseMark = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.panelFooter = new System.Windows.Forms.Panel();
+            this.panelGradeTableRightBorder = new System.Windows.Forms.Panel();
+            this.lblCurrentMarkWorth = new System.Windows.Forms.Label();
+            this.lblCurrentMarkYourMark = new System.Windows.Forms.Label();
+            this.lblFinalExamWorth = new System.Windows.Forms.Label();
+            this.panel1 = new System.Windows.Forms.Panel();
             this.panelGrades.SuspendLayout();
             this.panelCurrentSelection.SuspendLayout();
             this.panelSemester.SuspendLayout();
             this.panelSemesterLabel.SuspendLayout();
             this.panelHeader.SuspendLayout();
             this.panelProjections.SuspendLayout();
+            this.panelGradeTableContainer.SuspendLayout();
+            this.panelFinalMarkContainer.SuspendLayout();
+            this.panelGradeTable.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewGrades)).BeginInit();
+            this.panelFooter.SuspendLayout();
             this.SuspendLayout();
             // 
             // panelSemesterBorder
@@ -61,25 +85,45 @@ namespace GradeTrackerV3
             this.panelSemesterBorder.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(29)))), ((int)(((byte)(31)))), ((int)(((byte)(47)))));
             this.panelSemesterBorder.Location = new System.Drawing.Point(160, 0);
             this.panelSemesterBorder.Name = "panelSemesterBorder";
-            this.panelSemesterBorder.Size = new System.Drawing.Size(2, 471);
+            this.panelSemesterBorder.Size = new System.Drawing.Size(2, 783);
             this.panelSemesterBorder.TabIndex = 1;
             // 
             // panelGrades
             // 
+            this.panelGrades.Controls.Add(this.panelHeaderBottomBorder);
+            this.panelGrades.Controls.Add(this.panelHeaderTopBorder);
             this.panelGrades.Controls.Add(this.listboxCourseSelection);
             this.panelGrades.Controls.Add(this.panelCurrentSelection);
             this.panelGrades.Dock = System.Windows.Forms.DockStyle.Left;
-            this.panelGrades.Location = new System.Drawing.Point(5, 0);
+            this.panelGrades.Location = new System.Drawing.Point(0, 0);
             this.panelGrades.Name = "panelGrades";
-            this.panelGrades.Size = new System.Drawing.Size(858, 138);
+            this.panelGrades.Size = new System.Drawing.Size(853, 138);
             this.panelGrades.TabIndex = 2;
+            // 
+            // panelHeaderBottomBorder
+            // 
+            this.panelHeaderBottomBorder.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(29)))), ((int)(((byte)(31)))), ((int)(((byte)(47)))));
+            this.panelHeaderBottomBorder.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.panelHeaderBottomBorder.Location = new System.Drawing.Point(0, 136);
+            this.panelHeaderBottomBorder.Name = "panelHeaderBottomBorder";
+            this.panelHeaderBottomBorder.Size = new System.Drawing.Size(853, 2);
+            this.panelHeaderBottomBorder.TabIndex = 2;
+            // 
+            // panelHeaderTopBorder
+            // 
+            this.panelHeaderTopBorder.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(29)))), ((int)(((byte)(31)))), ((int)(((byte)(47)))));
+            this.panelHeaderTopBorder.Location = new System.Drawing.Point(-12, 61);
+            this.panelHeaderTopBorder.Name = "panelHeaderTopBorder";
+            this.panelHeaderTopBorder.Size = new System.Drawing.Size(866, 2);
+            this.panelHeaderTopBorder.TabIndex = 1;
             // 
             // listboxCourseSelection
             // 
+            this.listboxCourseSelection.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left)));
             this.listboxCourseSelection.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(42)))), ((int)(((byte)(62)))));
             this.listboxCourseSelection.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.listboxCourseSelection.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.listboxCourseSelection.Font = new System.Drawing.Font("Century Gothic", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.listboxCourseSelection.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.listboxCourseSelection.ForeColor = System.Drawing.Color.Gainsboro;
             this.listboxCourseSelection.FormattingEnabled = true;
             this.listboxCourseSelection.HorizontalScrollbar = true;
@@ -89,24 +133,21 @@ namespace GradeTrackerV3
             "ENGG 2100",
             "ENGG 3100",
             "ENGG 4100",
-            "ENGG 5100",
-            "ENGG 6100"});
-            this.listboxCourseSelection.Location = new System.Drawing.Point(0, 75);
+            "ENGG 5100"});
+            this.listboxCourseSelection.Location = new System.Drawing.Point(6, 77);
             this.listboxCourseSelection.MultiColumn = true;
             this.listboxCourseSelection.Name = "listboxCourseSelection";
-            this.listboxCourseSelection.ScrollAlwaysVisible = true;
-            this.listboxCourseSelection.Size = new System.Drawing.Size(858, 63);
+            this.listboxCourseSelection.Size = new System.Drawing.Size(848, 42);
             this.listboxCourseSelection.TabIndex = 0;
             // 
             // panelCurrentSelection
             // 
             this.panelCurrentSelection.Controls.Add(this.btnAddNewCourse);
-            this.panelCurrentSelection.Controls.Add(this.textboxCurrentSelection);
             this.panelCurrentSelection.Controls.Add(this.lblCurrentSelection);
             this.panelCurrentSelection.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelCurrentSelection.Location = new System.Drawing.Point(0, 0);
             this.panelCurrentSelection.Name = "panelCurrentSelection";
-            this.panelCurrentSelection.Size = new System.Drawing.Size(858, 60);
+            this.panelCurrentSelection.Size = new System.Drawing.Size(853, 60);
             this.panelCurrentSelection.TabIndex = 0;
             // 
             // btnAddNewCourse
@@ -116,36 +157,24 @@ namespace GradeTrackerV3
             this.btnAddNewCourse.IconChar = FontAwesome.Sharp.IconChar.None;
             this.btnAddNewCourse.IconColor = System.Drawing.Color.Black;
             this.btnAddNewCourse.IconSize = 16;
-            this.btnAddNewCourse.Location = new System.Drawing.Point(694, 17);
+            this.btnAddNewCourse.Location = new System.Drawing.Point(683, 11);
             this.btnAddNewCourse.Name = "btnAddNewCourse";
             this.btnAddNewCourse.Rotation = 0D;
-            this.btnAddNewCourse.Size = new System.Drawing.Size(164, 28);
+            this.btnAddNewCourse.Size = new System.Drawing.Size(164, 40);
             this.btnAddNewCourse.TabIndex = 2;
             this.btnAddNewCourse.Text = "Add New Course";
             this.btnAddNewCourse.UseVisualStyleBackColor = true;
             // 
-            // textboxCurrentSelection
-            // 
-            this.textboxCurrentSelection.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(42)))), ((int)(((byte)(62)))));
-            this.textboxCurrentSelection.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textboxCurrentSelection.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textboxCurrentSelection.ForeColor = System.Drawing.Color.Gainsboro;
-            this.textboxCurrentSelection.Location = new System.Drawing.Point(185, 22);
-            this.textboxCurrentSelection.Name = "textboxCurrentSelection";
-            this.textboxCurrentSelection.Size = new System.Drawing.Size(100, 23);
-            this.textboxCurrentSelection.TabIndex = 1;
-            this.textboxCurrentSelection.Text = "Winter 2019";
-            // 
             // lblCurrentSelection
             // 
             this.lblCurrentSelection.AutoSize = true;
-            this.lblCurrentSelection.Font = new System.Drawing.Font("Century Gothic", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblCurrentSelection.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblCurrentSelection.ForeColor = System.Drawing.Color.Gainsboro;
-            this.lblCurrentSelection.Location = new System.Drawing.Point(-3, 19);
+            this.lblCurrentSelection.Location = new System.Drawing.Point(2, 19);
             this.lblCurrentSelection.Name = "lblCurrentSelection";
-            this.lblCurrentSelection.Size = new System.Drawing.Size(182, 23);
+            this.lblCurrentSelection.Size = new System.Drawing.Size(143, 28);
             this.lblCurrentSelection.TabIndex = 0;
-            this.lblCurrentSelection.Text = "Current Selection:";
+            this.lblCurrentSelection.Text = "Winter 2019";
             // 
             // panelSemester
             // 
@@ -154,7 +183,7 @@ namespace GradeTrackerV3
             this.panelSemester.Dock = System.Windows.Forms.DockStyle.Left;
             this.panelSemester.Location = new System.Drawing.Point(0, 0);
             this.panelSemester.Name = "panelSemester";
-            this.panelSemester.Size = new System.Drawing.Size(160, 471);
+            this.panelSemester.Size = new System.Drawing.Size(160, 783);
             this.panelSemester.TabIndex = 0;
             // 
             // listboxSemester
@@ -175,7 +204,7 @@ namespace GradeTrackerV3
             "Fall 2020"});
             this.listboxSemester.Location = new System.Drawing.Point(3, 60);
             this.listboxSemester.Name = "listboxSemester";
-            this.listboxSemester.Size = new System.Drawing.Size(157, 411);
+            this.listboxSemester.Size = new System.Drawing.Size(157, 723);
             this.listboxSemester.TabIndex = 2;
             // 
             // panelSemesterLabel
@@ -190,32 +219,41 @@ namespace GradeTrackerV3
             // lblSemester
             // 
             this.lblSemester.AutoSize = true;
-            this.lblSemester.Font = new System.Drawing.Font("Century Gothic", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblSemester.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblSemester.ForeColor = System.Drawing.Color.Gainsboro;
-            this.lblSemester.Location = new System.Drawing.Point(29, 19);
+            this.lblSemester.Location = new System.Drawing.Point(21, 17);
             this.lblSemester.Name = "lblSemester";
-            this.lblSemester.Size = new System.Drawing.Size(100, 23);
+            this.lblSemester.Size = new System.Drawing.Size(122, 30);
             this.lblSemester.TabIndex = 0;
-            this.lblSemester.Text = "SEMESTER";
+            this.lblSemester.Text = "Semester";
             // 
             // panelHeader
             // 
+            this.panelHeader.Controls.Add(this.panelProjectionsLeftBorder);
             this.panelHeader.Controls.Add(this.panelProjections);
             this.panelHeader.Controls.Add(this.panelGrades);
-            this.panelHeader.Controls.Add(this.panelHeaderGap);
             this.panelHeader.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelHeader.Location = new System.Drawing.Point(162, 0);
             this.panelHeader.Name = "panelHeader";
             this.panelHeader.Size = new System.Drawing.Size(1011, 138);
             this.panelHeader.TabIndex = 4;
             // 
+            // panelProjectionsLeftBorder
+            // 
+            this.panelProjectionsLeftBorder.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(29)))), ((int)(((byte)(31)))), ((int)(((byte)(47)))));
+            this.panelProjectionsLeftBorder.Dock = System.Windows.Forms.DockStyle.Left;
+            this.panelProjectionsLeftBorder.Location = new System.Drawing.Point(853, 0);
+            this.panelProjectionsLeftBorder.Name = "panelProjectionsLeftBorder";
+            this.panelProjectionsLeftBorder.Size = new System.Drawing.Size(2, 138);
+            this.panelProjectionsLeftBorder.TabIndex = 5;
+            // 
             // panelProjections
             // 
             this.panelProjections.Controls.Add(this.lblProjectionTitle);
             this.panelProjections.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panelProjections.Location = new System.Drawing.Point(863, 0);
+            this.panelProjections.Location = new System.Drawing.Point(853, 0);
             this.panelProjections.Name = "panelProjections";
-            this.panelProjections.Size = new System.Drawing.Size(148, 138);
+            this.panelProjections.Size = new System.Drawing.Size(158, 138);
             this.panelProjections.TabIndex = 3;
             // 
             // lblProjectionTitle
@@ -224,26 +262,199 @@ namespace GradeTrackerV3
             this.lblProjectionTitle.AutoSize = true;
             this.lblProjectionTitle.Font = new System.Drawing.Font("Century Gothic", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblProjectionTitle.ForeColor = System.Drawing.Color.Gainsboro;
-            this.lblProjectionTitle.Location = new System.Drawing.Point(17, 63);
+            this.lblProjectionTitle.Location = new System.Drawing.Point(22, 63);
             this.lblProjectionTitle.Name = "lblProjectionTitle";
             this.lblProjectionTitle.Size = new System.Drawing.Size(113, 23);
             this.lblProjectionTitle.TabIndex = 0;
             this.lblProjectionTitle.Text = "Projections";
             // 
-            // panelHeaderGap
+            // panelGradeTableContainer
             // 
-            this.panelHeaderGap.Dock = System.Windows.Forms.DockStyle.Left;
-            this.panelHeaderGap.Location = new System.Drawing.Point(0, 0);
-            this.panelHeaderGap.Name = "panelHeaderGap";
-            this.panelHeaderGap.Size = new System.Drawing.Size(5, 138);
-            this.panelHeaderGap.TabIndex = 4;
+            this.panelGradeTableContainer.Controls.Add(this.panelFinalMarkContainer);
+            this.panelGradeTableContainer.Controls.Add(this.panel1);
+            this.panelGradeTableContainer.Controls.Add(this.panelGradeTable);
+            this.panelGradeTableContainer.Dock = System.Windows.Forms.DockStyle.Left;
+            this.panelGradeTableContainer.Location = new System.Drawing.Point(0, 0);
+            this.panelGradeTableContainer.Name = "panelGradeTableContainer";
+            this.panelGradeTableContainer.Size = new System.Drawing.Size(853, 645);
+            this.panelGradeTableContainer.TabIndex = 0;
+            // 
+            // panelFinalMarkContainer
+            // 
+            this.panelFinalMarkContainer.Controls.Add(this.lblFinalExamWorth);
+            this.panelFinalMarkContainer.Controls.Add(this.lblCurrentMarkYourMark);
+            this.panelFinalMarkContainer.Controls.Add(this.lblCurrentMarkWorth);
+            this.panelFinalMarkContainer.Controls.Add(this.lblFinalMark);
+            this.panelFinalMarkContainer.Controls.Add(this.lblCurrentMark);
+            this.panelFinalMarkContainer.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panelFinalMarkContainer.Location = new System.Drawing.Point(0, 414);
+            this.panelFinalMarkContainer.Name = "panelFinalMarkContainer";
+            this.panelFinalMarkContainer.Size = new System.Drawing.Size(853, 137);
+            this.panelFinalMarkContainer.TabIndex = 1;
+            // 
+            // lblFinalMark
+            // 
+            this.lblFinalMark.AutoSize = true;
+            this.lblFinalMark.Font = new System.Drawing.Font("Century Gothic", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblFinalMark.ForeColor = System.Drawing.Color.Gainsboro;
+            this.lblFinalMark.Location = new System.Drawing.Point(75, 77);
+            this.lblFinalMark.Name = "lblFinalMark";
+            this.lblFinalMark.Size = new System.Drawing.Size(175, 23);
+            this.lblFinalMark.TabIndex = 2;
+            this.lblFinalMark.Text = "Final Exam Worth";
+            // 
+            // lblCurrentMark
+            // 
+            this.lblCurrentMark.AutoSize = true;
+            this.lblCurrentMark.Font = new System.Drawing.Font("Century Gothic", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblCurrentMark.ForeColor = System.Drawing.Color.Gainsboro;
+            this.lblCurrentMark.Location = new System.Drawing.Point(75, 34);
+            this.lblCurrentMark.Name = "lblCurrentMark";
+            this.lblCurrentMark.Size = new System.Drawing.Size(136, 23);
+            this.lblCurrentMark.TabIndex = 1;
+            this.lblCurrentMark.Text = "Current Mark";
+            // 
+            // panelGradeTable
+            // 
+            this.panelGradeTable.Controls.Add(this.dataGridViewGrades);
+            this.panelGradeTable.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panelGradeTable.Location = new System.Drawing.Point(0, 0);
+            this.panelGradeTable.Name = "panelGradeTable";
+            this.panelGradeTable.Size = new System.Drawing.Size(853, 412);
+            this.panelGradeTable.TabIndex = 0;
+            // 
+            // dataGridViewGrades
+            // 
+            this.dataGridViewGrades.AllowUserToAddRows = false;
+            this.dataGridViewGrades.AllowUserToDeleteRows = false;
+            this.dataGridViewGrades.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dataGridViewGrades.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(42)))), ((int)(((byte)(62)))));
+            this.dataGridViewGrades.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            dataGridViewCellStyle11.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle11.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(42)))), ((int)(((byte)(62)))));
+            dataGridViewCellStyle11.Font = new System.Drawing.Font("Century Gothic", 9F);
+            dataGridViewCellStyle11.ForeColor = System.Drawing.Color.Gainsboro;
+            dataGridViewCellStyle11.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle11.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle11.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridViewGrades.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle11;
+            this.dataGridViewGrades.ColumnHeadersHeight = 44;
+            this.dataGridViewGrades.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
+            this.dataGridViewGrades.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.Task,
+            this.Worth,
+            this.YourMark,
+            this.CourseMark});
+            dataGridViewCellStyle12.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle12.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(42)))), ((int)(((byte)(62)))));
+            dataGridViewCellStyle12.Font = new System.Drawing.Font("Century Gothic", 9F);
+            dataGridViewCellStyle12.ForeColor = System.Drawing.Color.Gainsboro;
+            dataGridViewCellStyle12.Padding = new System.Windows.Forms.Padding(0, 4, 0, 4);
+            dataGridViewCellStyle12.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle12.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle12.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dataGridViewGrades.DefaultCellStyle = dataGridViewCellStyle12;
+            this.dataGridViewGrades.GridColor = System.Drawing.SystemColors.ControlLight;
+            this.dataGridViewGrades.Location = new System.Drawing.Point(79, 24);
+            this.dataGridViewGrades.Name = "dataGridViewGrades";
+            this.dataGridViewGrades.RowHeadersVisible = false;
+            this.dataGridViewGrades.RowHeadersWidth = 62;
+            this.dataGridViewGrades.RowTemplate.Height = 28;
+            this.dataGridViewGrades.Size = new System.Drawing.Size(706, 361);
+            this.dataGridViewGrades.TabIndex = 0;
+            // 
+            // Task
+            // 
+            this.Task.HeaderText = "Task";
+            this.Task.MinimumWidth = 8;
+            this.Task.Name = "Task";
+            // 
+            // Worth
+            // 
+            this.Worth.HeaderText = "Worth";
+            this.Worth.MinimumWidth = 8;
+            this.Worth.Name = "Worth";
+            // 
+            // YourMark
+            // 
+            this.YourMark.HeaderText = "Your Mark";
+            this.YourMark.MinimumWidth = 8;
+            this.YourMark.Name = "YourMark";
+            // 
+            // CourseMark
+            // 
+            this.CourseMark.HeaderText = "Course Mark";
+            this.CourseMark.MinimumWidth = 8;
+            this.CourseMark.Name = "CourseMark";
+            // 
+            // panelFooter
+            // 
+            this.panelFooter.Controls.Add(this.panelGradeTableRightBorder);
+            this.panelFooter.Controls.Add(this.panelGradeTableContainer);
+            this.panelFooter.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panelFooter.Location = new System.Drawing.Point(162, 138);
+            this.panelFooter.Name = "panelFooter";
+            this.panelFooter.Size = new System.Drawing.Size(1011, 645);
+            this.panelFooter.TabIndex = 5;
+            // 
+            // panelGradeTableRightBorder
+            // 
+            this.panelGradeTableRightBorder.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(29)))), ((int)(((byte)(31)))), ((int)(((byte)(47)))));
+            this.panelGradeTableRightBorder.Dock = System.Windows.Forms.DockStyle.Left;
+            this.panelGradeTableRightBorder.Location = new System.Drawing.Point(853, 0);
+            this.panelGradeTableRightBorder.Name = "panelGradeTableRightBorder";
+            this.panelGradeTableRightBorder.Size = new System.Drawing.Size(2, 645);
+            this.panelGradeTableRightBorder.TabIndex = 1;
+            // 
+            // lblCurrentMarkWorth
+            // 
+            this.lblCurrentMarkWorth.AutoSize = true;
+            this.lblCurrentMarkWorth.Font = new System.Drawing.Font("Century Gothic", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblCurrentMarkWorth.ForeColor = System.Drawing.Color.Gainsboro;
+            this.lblCurrentMarkWorth.Location = new System.Drawing.Point(313, 34);
+            this.lblCurrentMarkWorth.Name = "lblCurrentMarkWorth";
+            this.lblCurrentMarkWorth.Size = new System.Drawing.Size(48, 23);
+            this.lblCurrentMarkWorth.TabIndex = 3;
+            this.lblCurrentMarkWorth.Text = "50%";
+            // 
+            // lblCurrentMarkYourMark
+            // 
+            this.lblCurrentMarkYourMark.AutoSize = true;
+            this.lblCurrentMarkYourMark.Font = new System.Drawing.Font("Century Gothic", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblCurrentMarkYourMark.ForeColor = System.Drawing.Color.Gainsboro;
+            this.lblCurrentMarkYourMark.Location = new System.Drawing.Point(494, 34);
+            this.lblCurrentMarkYourMark.Name = "lblCurrentMarkYourMark";
+            this.lblCurrentMarkYourMark.Size = new System.Drawing.Size(48, 23);
+            this.lblCurrentMarkYourMark.TabIndex = 4;
+            this.lblCurrentMarkYourMark.Text = "50%";
+            // 
+            // lblFinalExamWorth
+            // 
+            this.lblFinalExamWorth.AutoSize = true;
+            this.lblFinalExamWorth.Font = new System.Drawing.Font("Century Gothic", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblFinalExamWorth.ForeColor = System.Drawing.Color.Gainsboro;
+            this.lblFinalExamWorth.Location = new System.Drawing.Point(313, 77);
+            this.lblFinalExamWorth.Name = "lblFinalExamWorth";
+            this.lblFinalExamWorth.Size = new System.Drawing.Size(48, 23);
+            this.lblFinalExamWorth.TabIndex = 5;
+            this.lblFinalExamWorth.Text = "50%";
+            // 
+            // panel1
+            // 
+            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(29)))), ((int)(((byte)(31)))), ((int)(((byte)(47)))));
+            this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel1.Location = new System.Drawing.Point(0, 412);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(853, 2);
+            this.panel1.TabIndex = 2;
             // 
             // FormDashboard
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(42)))), ((int)(((byte)(62)))));
-            this.ClientSize = new System.Drawing.Size(1173, 471);
+            this.ClientSize = new System.Drawing.Size(1173, 783);
+            this.Controls.Add(this.panelFooter);
             this.Controls.Add(this.panelHeader);
             this.Controls.Add(this.panelSemesterBorder);
             this.Controls.Add(this.panelSemester);
@@ -258,6 +469,12 @@ namespace GradeTrackerV3
             this.panelHeader.ResumeLayout(false);
             this.panelProjections.ResumeLayout(false);
             this.panelProjections.PerformLayout();
+            this.panelGradeTableContainer.ResumeLayout(false);
+            this.panelFinalMarkContainer.ResumeLayout(false);
+            this.panelFinalMarkContainer.PerformLayout();
+            this.panelGradeTable.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewGrades)).EndInit();
+            this.panelFooter.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -271,13 +488,30 @@ namespace GradeTrackerV3
         private System.Windows.Forms.Panel panelSemesterLabel;
         private System.Windows.Forms.Label lblSemester;
         private System.Windows.Forms.ListBox listboxSemester;
-        private System.Windows.Forms.TextBox textboxCurrentSelection;
         private ListBox listboxCourseSelection;
         private FontAwesome.Sharp.IconButton btnAddNewCourse;
         private Panel panelHeader;
         private Panel panelProjections;
         private Label lblProjectionTitle;
-        private Panel panelHeaderGap;
+        private Panel panelGradeTableContainer;
+        private Panel panelFooter;
+        private Panel panelGradeTableRightBorder;
+        private Panel panelHeaderTopBorder;
+        private Panel panelProjectionsLeftBorder;
+        private Panel panelHeaderBottomBorder;
+        private Panel panelGradeTable;
+        private DataGridView dataGridViewGrades;
+        private DataGridViewTextBoxColumn Task;
+        private DataGridViewTextBoxColumn Worth;
+        private DataGridViewTextBoxColumn YourMark;
+        private DataGridViewTextBoxColumn CourseMark;
+        private Panel panelFinalMarkContainer;
+        private Label lblCurrentMark;
+        private Label lblFinalMark;
+        private Label lblCurrentMarkWorth;
+        private Label lblCurrentMarkYourMark;
+        private Label lblFinalExamWorth;
+        private Panel panel1;
     }
 
 

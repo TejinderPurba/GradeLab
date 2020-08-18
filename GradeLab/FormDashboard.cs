@@ -39,6 +39,30 @@ namespace GradeTrackerV3
                     PointGeometrySize = 5
                 }
             };*/
+
+
+            // Populating the grade table on the dashboard
+            int n = dataGridViewGrades.Rows.Add();
+            dataGridViewGrades.Rows[n].Cells[0].Value = "Testwudhwiudhwuidh";
+            dataGridViewGrades.Rows[n].Cells[1].Value = "Test";
+            dataGridViewGrades.Rows[n].Cells[2].Value = "Test";
+            dataGridViewGrades.Rows[n].Cells[3].Value = "Test";
+            n = dataGridViewGrades.Rows.Add();
+            dataGridViewGrades.Rows[n].Cells[0].Value = "Test";
+            dataGridViewGrades.Rows[n].Cells[1].Value = "Test";
+            dataGridViewGrades.Rows[n].Cells[2].Value = "Test";
+            dataGridViewGrades.Rows[n].Cells[3].Value = "Test";
+            n = dataGridViewGrades.Rows.Add();
+            dataGridViewGrades.Rows[n].Cells[0].Value = "Test";
+            dataGridViewGrades.Rows[n].Cells[1].Value = "Test";
+            dataGridViewGrades.Rows[n].Cells[2].Value = "Test";
+            dataGridViewGrades.Rows[n].Cells[3].Value = "Test";
+            n = dataGridViewGrades.Rows.Add();
+            dataGridViewGrades.Rows[n].Cells[0].Value = "Test";
+            dataGridViewGrades.Rows[n].Cells[1].Value = "Test";
+            dataGridViewGrades.Rows[n].Cells[2].Value = "Test";
+            dataGridViewGrades.Rows[n].Cells[3].Value = "Test";
+
         }
     }
 }
